@@ -1,30 +1,12 @@
 /*CSS3*/
 
-/*Round Div*/
-@mixin round ($curve){ 	border-radius: $curve; 	-moz-border-radius: $curve; -webkit-border-radius: $curve; 
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/}
-@mixin round-top ($curve){ 	border-radius: $curve $curve 0px 0px; -moz-border-radius: $curve $curve 0px 0px; -ebkit-border-radius: $curve $curve 0px 0px;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/}
-@mixin round-bottom ($curve){ border-radius: 0px 0px $curve $curve; -moz-border-radius: 0px 0px $curve $curve; -webkit-border-radius: 0px 0px $curve $curve;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/ }
-
-/*Div Shadow*/
-@mixin box-shadow ($x, $y, $blur, $color){ -moz-box-shadow: $x $y $blur $color;	-webkit-box-shadow: $x $y $blur $color;	box-shadow: $x $y $blu $color;}
-
-
-@mixin rotate-item($degrees){ // Does not work in IE
-	-webkit-transform: rotate($degrees);-moz-transform: rotate($degrees);
-}
-
-/*TEXT ATTRIBUTES*/
+/*--TEXT ATTRIBUTES--*/
 
 @mixin text-emboss($color){ text-shadow: $color 0 1px 1px;}
 
 @mixin text-stroke($color){ text-shadow: -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000,  1px 1px 0 #000;}
 
-@mixin text-inset ($darkcolor, $lightcolor){
-	text-shadow: 0px -2px 0px $darkcolor, 0px 2px 3px $lightcolor;
-}
+@mixin text-inset ($darkcolor, $lightcolor){ text-shadow: 0px -2px 0px $darkcolor, 0px 2px 3px $lightcolor; }
 
 @mixin text-glow($color1, $color2){
      text-shadow: 0 0 10px $color1, 0 0 20px $color1, 0 0 30px $color1,
@@ -32,7 +14,26 @@
                   0 0 100px $color2, 0 0 150px $color2;
 }
 
-@mixin box_gradient ($start, $finish) {
+@mixin text-shadow ($x, $y, $blur, $color) { text-shadow: $x $y $blur $color; }
+
+
+/*--DIV ATTRIBUTES--*/
+/*Round Div*/
+@mixin round ($curve){ 	border-radius: $curve; 	-moz-border-radius: $curve; -webkit-border-radius: $curve; 
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;}
+@mixin round-top ($curve){ 	border-radius: $curve $curve 0px 0px; -moz-border-radius: $curve $curve 0px 0px; -ebkit-border-radius: $curve $curve 0px 0px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;}
+@mixin round-bottom ($curve){ border-radius: 0px 0px $curve $curve; -moz-border-radius: 0px 0px $curve $curve; -webkit-border-radius: 0px 0px $curve $curve;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;}
+
+/*Div Shadow*/
+@mixin box-shadow ($x, $y, $blur, $color){ -moz-box-shadow: $x $y $blur $color;	-webkit-box-shadow: $x $y $blur $color;	box-shadow: $x $y $blu $color;}
+
+/*Div Rotate*/
+@mixin rotate-item($degrees){ -webkit-transform: rotate($degrees);-moz-transform: rotate($degrees); /*Doesnt work in IE*/}
+
+/*Div Gradient*/
+@mixin box-gradient ($start, $finish) {
   background-color: $start;
   background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($finish)); /* Saf4+, Chrome */
   background-image: -webkit-linear-gradient(top, $start, $finish); /* Chrome 10+, Saf5.1+, iOS 5+ */
@@ -42,6 +43,12 @@
   background-image:         linear-gradient(to bottom, $start, $finish);
 }
 
+/*Element Opacity*/
+@mixin opacity ($level) { /* use between 01-99 */
+  opacity: 0.$level; 
+  filter: alpha(opacity=$level); 
+}
+
 
 .box_rgba {
   background-color: transparent;
@@ -49,8 +56,6 @@
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99B4B490,endColorstr=#99B4B490);
             zoom: 1;
 }
-
-
 
 .box_rotate {
   -webkit-transform: rotate(7.5deg);  
@@ -63,8 +68,6 @@
                zoom: 1;
 }
 
-
-
 .box_scale {
   -webkit-transform: scale(0.8);  
      -moz-transform: scale(0.8);  
@@ -74,8 +77,6 @@
              filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 
                      M11=0.9999025240093042, M12=-0.013962180339145272, M21=0.013962180339145272, M22=0.9999025240093042,SizingMethod='auto expand');
 }
-
-
 
 
 .box_3dtransforms {
@@ -98,20 +99,6 @@
        -o-transition: all 0.3s ease-out;  
           transition: all 0.3s ease-out;
 }
-
-
-
-.box_textshadow {
-     text-shadow: 1px 1px 3px #888; 
-}
-
-
-
-@mixin opacity ($level) { /* use between 01-99 */
-  opacity: 0.$level; 
-  filter: alpha(opacity=$level); 
-}
-
 
 * {
   -webkit-box-sizing: border-box; 
