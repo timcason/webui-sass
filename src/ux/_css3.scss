@@ -1,6 +1,5 @@
 /*CSS3*/
 
-
 /*Round Div*/
 @mixin round ($curve){ 	border-radius: $curve; 	-moz-border-radius: $curve; -webkit-border-radius: $curve; 
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/}
@@ -13,8 +12,7 @@
 @mixin box-shadow ($x, $y, $blur, $color){ -moz-box-shadow: $x $y $blue $color;	-webkit-box-shadow: $x $y $blue $color;	box-shadow: $x $y $blue $color;}
 
 @mixin rotate-item($degrees){ // Does not work in IE
-	-webkit-transform: rotate($degrees);
-	-moz-transform: rotate($degrees);
+	-webkit-transform: rotate($degrees);-moz-transform: rotate($degrees);
 }
 
 
