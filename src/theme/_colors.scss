@@ -2,54 +2,61 @@
 
 /*Configure and toggle multiple color schemes */
 
+$scheme:analgous; // analgous, tetrad, triadic;
+
 
 /*--Scheme--*/
 /*Analgous*/
-$a-base-color:;
-$a-pair1-color1:;
-$a-pair1-color2:;
-$a-pair2-color1:;
-$a-pair2-color2:;
-$a-text-header:;
-$a-text-subheader:;
-$a-text-contentheader:;
-$a-text-content:;
-
+$analgous-color1:;    //pair 1
+$analgous-color2:;    //pair 1
+$analgous-color3:;    //pair 2
+$analgous-color4:;    //pair 2
+$analgous-color5:;    //base color
+$analgous-text-header:;
+$analgous-text-subheader:;
+$analgous-text-contentheader:;
+$analgous-text-content:;
 
 /*Tetrad*/
 
-$te-base-color1:;
-$te-base-color2:;
-$te-base-color3:;
-$te-base-color4:;
-$te-text-header:;
-$te-text-subheader:;
-$te-text-contentheader:;
-$te-text-content:;
-
-
+$tetrad-color1:; //pair 1
+$tetrad-color2:; //pair 1
+$tetrad-color3:; //pair 2
+$tetrad-color4:; //pair 2
+$tetrad-color5:; // Not Used
+$tetrad-text-header:;
+$tetrad-text-subheader:;
+$tetrad-text-contentheader:;
+$tetrad-text-content:;
 
 /*Triadic*/
-$tr-base-color1:;
-$tr-base-color2:;
-$tr-base-color3:;
-$tr-compliment-color1:;
-$tr-compliment-color2:;
-$te-text-header:;
-$te-text-subheader:;
-$te-text-contentheader:;
-$te-text-content:;
+$triadic-color1:;    
+$triadic-color2:;    
+$triadic-color3:;    
+$triadic-color4:; //Typically not used
+$triadic-color5:; //Typically not used
+$triadic-text-header:;
+$triadic-text-subheader:;
+$triadic-text-contentheader:;
+$triadic-text-content:;
+
+
+
+
+
+/*Scheme Linking*/
+$color1:$$scheme-color1;
+$color2:$$scheme-color2;
+$color3:$$scheme-color3;
+$color4:$$scheme-color4;
+$color5:$$scheme-color5;
+$text-header:$scheme-text-header:;
+$text-subheader:$scheme-text-subheader:;
+$text-contentheader:$scheme-text-contentheader:;
+$text-content:$scheme-text-content:;
 
 /*--Font Coloring--*/
-
-/*Header*/
-.font-header{ color:$header-color;}
-
-/*Subheader*/
-.font-subheader{ color:$subheader-color;}
-
-/*Content header*/
-.font-contentheader{color:$contentheader-color;}
-
-/*Content*/
-.font-content {color:$content-color;}
+.font-header{ color:$text-header;}
+.font-subheader{ color:$text-subheader;}
+.font-contentheader{color:$text-contentheader;}
+.font-content {color:$text-content;}
