@@ -1,13 +1,13 @@
 /*--FONTS--*/
 // drop all font files in root of the font folder
-//
-$header = "gothammedium"; //
-$subheader ="";//
-$contentheader="";
+
+$header = "";
+$subheader ="";
+$contentheader="" ;
 $content="";
 
 
-/*--header--*/
+/*--Header--*/
 h1,h2 .font-header {
 	font-family:$header;
 	font-weight:normal;
@@ -28,7 +28,7 @@ h1,h2 .font-header {
 
 
 
-/*--subheader--*/
+/*--Subheader--*/
 h2,h3, .font-subheader {
 	font-family:$subheader;
 	font-weight:normal;
@@ -48,7 +48,7 @@ h2,h3, .font-subheader {
 
 
 
-/*--font for content-header--*/
+/*--Content-Header--*/
 h2,h3, .font-contentheader {
 	font-family:$contentheader;
 	font-weight:normal;
@@ -68,7 +68,7 @@ h2,h3, .font-contentheader {
 
 
 
-/*--font for regular content--*/
+/*--Content--*/
 .font-content {
 	font-family:$content;
 	font-weight:normal;
