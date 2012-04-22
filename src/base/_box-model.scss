@@ -17,9 +17,7 @@ $outline-width:$half;
 /*Choose default base unit*/
 $base-unit:$single;
 
-/*Define All Box Model Elements*/
-/*----DO NOT EDIT BELOW----*/
-
+/*Define All Box Model Elements - DO NOT EDIT*/
 /*Margin Definitions*/
 @mixin margin-all($base-unit){ margin:$base-unit;}
 @mixin margin-top($base-unit){ margin-top:$base-unit;}

@@ -1,0 +1,200 @@
+/*CSS3*/
+
+
+/*Round Div*/
+@mixin round ($curve){ 	border-radius: $curve; 	-moz-border-radius: $curve; -webkit-border-radius: $curve; 
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/}
+@mixin round-top ($curve){ 	border-radius: $curve $curve 0px 0px; -moz-border-radius: $curve $curve 0px 0px; -ebkit-border-radius: $curve $curve 0px 0px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/}
+@mixin round-bottom ($curve){ border-radius: 0px 0px $curve $curve; -moz-border-radius: 0px 0px $curve $curve; -webkit-border-radius: 0px 0px $curve $curve;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/ }
+
+/*Div Shadow*/
+@mixin box-shadow ($x, $y, $blur, $color){ -moz-box-shadow: $x $y $blue $color;	-webkit-box-shadow: $x $y $blue $color;	box-shadow: $x $y $blue $color;}
+
+@mixin rotate-item($degrees){ // Does not work in IE
+	-webkit-transform: rotate($degrees);
+	-moz-transform: rotate($degrees);
+}
+
+
+/*TEXT ATTRIBUTES*/
+
+@mixin text-emboss($color){ text-shadow: $color 0 1px 1px;}
+
+@mixin text-stroke($color){ text-shadow: -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000,  1px 1px 0 #000;}
+
+@mixin text-inset ($darkcolor, $lightcolor){
+	text-shadow: 0px -2px 0px $darkcolor, 0px 2px 3px $lightcolor;
+}
+
+@mixin text-glow($color1, $color2){
+     text-shadow: 0 0 10px $color1, 0 0 20px $color1, 0 0 30px $color1,
+                  0 0 40px $color2, 0 0 70px $color2, 0 0 80px $color2,
+                  0 0 100px $color2, 0 0 150px $color2;
+}
+
+.box_shadow {
+  -webkit-box-shadow: 0px 0px 4px 0px #ffffff; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow: 0px 0px 4px 0px #ffffff; /* FF3.5 - 3.6 */
+          box-shadow: 0px 0px 4px 0px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+
+
+
+.box_gradient {
+  background-color: #444444;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #444444, #999999); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #444444, #999999); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, #444444, #999999); /* IE10 */
+  background-image:      -o-linear-gradient(top, #444444, #999999); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, #444444, #999999);
+}
+
+
+.box_rgba {
+  background-color: transparent;
+  background-color: rgba(180, 180, 144, 0.6); 
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99B4B490,endColorstr=#99B4B490);
+            zoom: 1;
+}
+
+
+
+.box_rotate {
+  -webkit-transform: rotate(7.5deg);  
+     -moz-transform: rotate(7.5deg); 
+      -ms-transform: rotate(7.5deg);  
+       -o-transform: rotate(7.5deg);  
+          transform: rotate(7.5deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 
+                     M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+
+
+.box_scale {
+  -webkit-transform: scale(0.8);  
+     -moz-transform: scale(0.8);  
+      -ms-transform: scale(0.8);  
+       -o-transform: scale(0.8); 
+          transform: scale(0.8);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 
+                     M11=0.9999025240093042, M12=-0.013962180339145272, M21=0.013962180339145272, M22=0.9999025240093042,SizingMethod='auto expand');
+}
+
+
+
+
+.box_3dtransforms {
+  -webkit-perspective: 300;  
+     -moz-perspective: 300; 
+      -ms-perspective: 300;  
+          perspective: 300; 
+  -webkit-transform: rotateY(180deg);  -webkit-transform-style: preserve-3d;   
+     -moz-transform: rotateY(180deg);     -moz-transform-style: preserve-3d;
+      -ms-transform: rotateY(180deg);      -ms-transform-style: preserve-3d;
+          transform: rotateY(180deg);          transform-style: preserve-3d; 
+}
+
+
+
+.box_transition {
+  -webkit-transition: all 0.3s ease-out;  
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;  
+       -o-transition: all 0.3s ease-out;  
+          transition: all 0.3s ease-out
+}
+
+
+
+.box_textshadow {
+     text-shadow: 1px 1px 3px #888; 
+}
+
+
+
+.box_opacity {
+  opacity: 0.9; 
+  filter: alpha(opacity=90); 
+}
+
+
+* {
+  -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box; 
+}
+
+
+
+.box_bgsize {
+  -webkit-background-size: 100% 100%; 
+     -moz-background-size: 100% 100%; 
+          background-size: 100% 100%; 
+}
+
+
+
+.box_columns {
+  -webkit-column-count: 2;  -webkit-column-gap: 15px; 
+     -moz-column-count: 2;     -moz-column-gap: 15px; 
+          column-count: 2;          column-gap: 15px; 
+}
+
+
+
+.box_animation:hover {
+  -webkit-animation: myanim 5s infinite; 
+     -moz-animation: myanim 5s infinite; 
+      -ms-animation: myanim 5s infinite; 
+       -o-animation: myanim 5s infinite; 
+}
+
+@-webkit-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+@-moz-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+@-ms-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+@-o-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+
+.matrix {
+  
+-webkit-transform: matrix(1.895,-2.518,-1.293,-0.658,3,-4);
+-moz-transform: matrix(1.895,-2.518,-1.293,-0.658,3px,-4px);
+-ms-transform: matrix(1.895,-2.518,-1.293,-0.658,3,-4);
+-o-transform: matrix(1.895,-2.518,-1.293,-0.658,3,-4);
+transform: matrix(1.895,-2.518,-1.293,-0.658,3,-4);
+
+}
+
+@font-face {
+  font-family: 'WebFont';
+  src: url('myfont.eot?#') format('eot'),  
+       url('myfont.woff') format('woff'),  
+       url('myfont.ttf') format('truetype'); 
+}
+
+
+.box_tabsize {
+  -moz-tab-size: 2; 
+    -o-tab-size: 2; 
+       tab-size: 2;
+}
