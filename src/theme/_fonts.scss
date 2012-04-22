@@ -1,0 +1,86 @@
+/*--FONTS--*/
+// drop all font files in root of the font folder
+//
+$header = "gothammedium"; //
+$subheader ="";//
+$contentheader="";
+$content="";
+
+
+/*--header--*/
+h1,h2 .font-header {
+	font-family:$header;
+	font-weight:normal;
+	font-style:normal;
+	text-shadow:0 -1px #111111;
+}
+@font-face {
+    font-family: $header;
+    src: url('fonts/$header.eot');
+    src: url('fonts/$header.eot?#iefix') format('embedded-opentype'),
+         url('fonts/$header.woff') format('woff'),
+         url('fonts/$header.ttf') format('truetype'),
+         url('fonts/$header.svg#aaa') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/*--subheader--*/
+h2,h3, .font-subheader {
+	font-family:$subheader;
+	font-weight:normal;
+	font-style:normal;
+	text-shadow:0 -1px #111111;
+}
+@font-face {
+    font-family:$subheader;
+    src: url('fonts/$subheader.eot');
+    src: url('fonts/$subheader.eot?#iefix') format('embedded-opentype'),
+         url('fonts/$subheader.ttf') format('truetype'),
+         url('fonts/$subheader.svg#bbb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/*--font for content-header--*/
+h2,h3, .font-contentheader {
+	font-family:$contentheader;
+	font-weight:normal;
+	font-style:normal;
+	text-shadow:0 -1px #111111;
+}
+@font-face {
+    font-family: $contentheader;
+    src: url('fonts/$contentheader.eot');
+    src: url('fonts/$contentheader.eot?#iefix') format('embedded-opentype'),
+         url('fonts/$contentheader.ttf') format('truetype'),
+         url('fonts/$contentheader.svg#ccc') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/*--font for regular content--*/
+.font-content {
+	font-family:$content;
+	font-weight:normal;
+	font-style:normal;
+	text-shadow:0 -1px #111111;
+}
+@font-face {
+    font-family: $content;
+    src: url('fonts/$content.eot');
+    src: url('fonts/$content.eot?#iefix') format('embedded-opentype'),
+         url('fonts/$content.ttf') format('truetype'),
+         url('fonts/$content.svg#ddd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

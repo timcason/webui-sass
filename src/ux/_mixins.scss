@@ -1,0 +1,51 @@
+/*MIXINS*/
+
+@mixin round ($curve){
+	border-radius: $curve; 
+	-moz-border-radius: $curve; 
+	-webkit-border-radius: $curve; 
+}
+
+@mixin round-top ($curve){
+	border-radius: $curve $curve 0px 0px; 
+	-moz-border-radius: $curve $curve 0px 0px; 
+	-webkit-border-radius: $curve $curve 0px 0px;	
+}
+
+@mixin round-bottom ($curve){
+	border-radius: 0px 0px $curve $curve; 
+	-moz-border-radius: 0px 0px $curve $curve; 
+	-webkit-border-radius: 0px 0px $curve $curve;	
+}
+
+@mixin box-shadow ($x, $y, $blur, $color){
+	-moz-box-shadow: $x $y $blue $color;
+	-webkit-box-shadow: $x $y $blue $color;
+	box-shadow: $x $y $blue $color;
+}
+
+@mixin rotate-item($degrees){ // Does not work in IE
+	-webkit-transform: rotate($degrees);
+	-moz-transform: rotate($degrees);
+}
+
+
+/*TEXT ATTRIBUTES*/
+
+@mixin text-emboss($color){
+	text-shadow: $color 0 1px 1px;
+}
+
+@mixin text-stroke($color){
+	text-shadow: -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000,  1px 1px 0 #000;
+}
+
+@mixin text-inset ($darkcolor, $lightcolor){
+	text-shadow: 0px -2px 0px $darkcolor, 0px 2px 3px $lightcolor;
+}
+
+@mixin text-glow($color1, $color2){
+     text-shadow: 0 0 10px $color1, 0 0 20px $color1, 0 0 30px $color1,
+                  0 0 40px $color2, 0 0 70px $color2, 0 0 80px $color2,
+                  0 0 100px $color2, 0 0 150px $color2;
+}
