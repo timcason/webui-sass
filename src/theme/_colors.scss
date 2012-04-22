@@ -1,1 +1,55 @@
-/*-COLORS-*/
+/*---COLORS---*/
+
+/*Configure and toggle multiple color schemes */
+
+
+/*--Scheme--*/
+/*Analgous*/
+$a-base-color:;
+$a-pair1-color1:;
+$a-pair1-color2:;
+$a-pair2-color1:;
+$a-pair2-color2:;
+$a-text-header:;
+$a-text-subheader:;
+$a-text-contentheader:;
+$a-text-content:;
+
+
+/*Tetrad*/
+
+$te-base-color1:;
+$te-base-color2:;
+$te-base-color3:;
+$te-base-color4:;
+$te-text-header:;
+$te-text-subheader:;
+$te-text-contentheader:;
+$te-text-content:;
+
+
+
+/*Triadic*/
+$tr-base-color1:;
+$tr-base-color2:;
+$tr-base-color3:;
+$tr-compliment-color1:;
+$tr-compliment-color2:;
+$te-text-header:;
+$te-text-subheader:;
+$te-text-contentheader:;
+$te-text-content:;
+
+/*--Font Coloring--*/
+
+/*Header*/
+.font-header{ color:$header-color;}
+
+/*Subheader*/
+.font-subheader{ color:$subheader-color;}
+
+/*Content header*/
+.font-contentheader{color:$contentheader-color;}
+
+/*Content*/
+.font-content {color:$content-color;}
