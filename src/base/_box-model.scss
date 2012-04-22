@@ -4,14 +4,14 @@
 $single:10px;
 $double:20px;
 $half:5px;
-$fourth:2.5px;
+$fourth:2px;
 
 $border-size:1px;
 $border-color:#121212;
 $border-style:solid;
 
 $outline-color:#ccc;
-$outline-style:#dotted;
+$outline-style:dotted;
 $outline-width:$half;
 
 /*Choose default base unit*/
@@ -20,14 +20,14 @@ $base-unit:$single;
 /*Define All Box Model Elements*/
 /*----DO NOT EDIT BELOW----*/
 
-/*margin*/
+/*Margin Definitions*/
 @mixin margin-all($base-unit){ margin:$base-unit;}
 @mixin margin-top($base-unit){ margin-top:$base-unit;}
 @mixin margin-right($base-unit){ margin-right:$base-unit;}
 @mixin margin-bottom($base-unit){ margin-bottom:$base-unit;}
 @mixin margin-left($base-unit){ margin-bottom:$base-unit;}
 
-/*outline*/
+/*Outline Definitions*/
 /*included for brownie points--though i never use it*/
 @mixin outline($outline-color,$outline-style,$outline-width){ outline:$outline-color $outline-style $outline-width;}
 
