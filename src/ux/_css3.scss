@@ -44,10 +44,13 @@
 }
 
 /*Element Opacity*/
-@mixin opacity ($level) { /* use between 01-99 */
-  opacity: 0.$level; 
-  filter: alpha(opacity=$level); 
-}
+@mixin opacity30 {  opacity: 0.30;  filter: alpha(opacity=30); }
+@mixin opacity40 {  opacity: 0.40;  filter: alpha(opacity=40); }
+@mixin opacity50 {  opacity: 0.50;  filter: alpha(opacity=50); }
+@mixin opacity60 {  opacity: 0.60;  filter: alpha(opacity=60); }
+@mixin opacity70 {  opacity: 0.70;  filter: alpha(opacity=70); }
+@mixin opacity80 {  opacity: 0.80;  filter: alpha(opacity=80); }
+@mixin opacity90 {  opacity: 0.90;  filter: alpha(opacity=90); }
 
 
 .box_rgba {
