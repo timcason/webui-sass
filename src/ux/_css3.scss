@@ -9,12 +9,12 @@
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /*Fixes Color Bleed*/ }
 
 /*Div Shadow*/
-@mixin box-shadow ($x, $y, $blur, $color){ -moz-box-shadow: $x $y $blue $color;	-webkit-box-shadow: $x $y $blue $color;	box-shadow: $x $y $blue $color;}
+@mixin box-shadow ($x, $y, $blur, $color){ -moz-box-shadow: $x $y $blur $color;	-webkit-box-shadow: $x $y $blur $color;	box-shadow: $x $y $blu $color;}
+
 
 @mixin rotate-item($degrees){ // Does not work in IE
 	-webkit-transform: rotate($degrees);-moz-transform: rotate($degrees);
 }
-
 
 /*TEXT ATTRIBUTES*/
 
@@ -32,22 +32,14 @@
                   0 0 100px $color2, 0 0 150px $color2;
 }
 
-.box_shadow {
-  -webkit-box-shadow: 0px 0px 4px 0px #ffffff; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-     -moz-box-shadow: 0px 0px 4px 0px #ffffff; /* FF3.5 - 3.6 */
-          box-shadow: 0px 0px 4px 0px #ffffff; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
-}
-
-
-
-.box_gradient {
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999)); /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #444444, #999999); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top, #444444, #999999); /* FF3.6 */
-  background-image:     -ms-linear-gradient(top, #444444, #999999); /* IE10 */
-  background-image:      -o-linear-gradient(top, #444444, #999999); /* Opera 11.10+ */
-  background-image:         linear-gradient(to bottom, #444444, #999999);
+@mixin box_gradient ($start, $finish) {
+  background-color: $start;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($finish)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $start, $finish); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $start, $finish); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $start, $finish); /* IE10 */
+  background-image:      -o-linear-gradient(top, $start, $finish); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, $start, $finish);
 }
 
 
@@ -104,7 +96,7 @@
      -moz-transition: all 0.3s ease-out;
       -ms-transition: all 0.3s ease-out;  
        -o-transition: all 0.3s ease-out;  
-          transition: all 0.3s ease-out
+          transition: all 0.3s ease-out;
 }
 
 
@@ -115,9 +107,9 @@
 
 
 
-.box_opacity {
-  opacity: 0.9; 
-  filter: alpha(opacity=90); 
+@mixin opacity ($level) { /* use between 01-99 */
+  opacity: 0.$level; 
+  filter: alpha(opacity=$level); 
 }
 
 
