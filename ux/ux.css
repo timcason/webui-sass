@@ -1,22 +1,22 @@
 /*
 Syntax error: Invalid CSS after "  opacity: 0": expected ";", was ".$level; "
-        on line 111 of ./src/ux/_css3.scss
+        on line 48 of ./src/ux/_css3.scss
         from line 2 of ./src/ux/ux.scss
 
-106: }
-107: 
-108: 
-109: 
-110: @mixin opacity ($level) { /* use between 01-99 */
-111:   opacity: 0.$level; 
-112:   filter: alpha(opacity=$level); 
-113: }
-114: 
-115: 
-116: * {
+43:   background-image:         linear-gradient(to bottom, $start, $finish);
+44: }
+45: 
+46: /*Element Opacity*/
+47: @mixin opacity ($level) { /* use between 01-99 */
+48:   opacity: 0.$level; 
+49:   filter: alpha(opacity=$level); 
+50: }
+51: 
+52: 
+53: .box_rgba {
 
 Backtrace:
-./src/ux/_css3.scss:111
+./src/ux/_css3.scss:48
 ./src/ux/ux.scss:2
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:928:in `expected'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:874:in `expected'
@@ -87,4 +87,4 @@ C:/Ruby193/bin/sass:19:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"  opacity: 0\": expected \";\", was \".$level; \"\A         on line 111 of ./src/ux/_css3.scss\A         from line 2 of ./src/ux/ux.scss\A \A 106: }\A 107: \A 108: \A 109: \A 110: @mixin opacity ($level) { /* use between 01-99 */\A 111:   opacity: 0.$level; \A 112:   filter: alpha(opacity=$level); \A 113: }\A 114: \A 115: \A 116: * {"; }
+  content: "Syntax error: Invalid CSS after \"  opacity: 0\": expected \";\", was \".$level; \"\A         on line 48 of ./src/ux/_css3.scss\A         from line 2 of ./src/ux/ux.scss\A \A 43:   background-image:         linear-gradient(to bottom, $start, $finish);\A 44: }\A 45: \A 46: /*Element Opacity*/\A 47: @mixin opacity ($level) { /* use between 01-99 */\A 48:   opacity: 0.$level; \A 49:   filter: alpha(opacity=$level); \A 50: }\A 51: \A 52: \A 53: .box_rgba {"; }
