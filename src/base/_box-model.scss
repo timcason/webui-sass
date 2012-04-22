@@ -1,1 +1,46 @@
 /*BOX MODEL*/
+
+/*Define Basic Values for Box Model*/
+$single:10px;
+$double:20px;
+$half:5px;
+$fourth:2.5px;
+
+$border-size:1px;
+$border-color:#121212;
+$border-style:solid;
+
+$outline-color:#ccc;
+$outline-style:#dotted;
+$outline-width:$half;
+
+/*Choose default base unit*/
+$base-unit:$single;
+
+/*Define All Box Model Elements*/
+/*----DO NOT EDIT BELOW----*/
+
+/*margin*/
+@mixin margin-all($base-unit){ margin:$base-unit;}
+@mixin margin-top($base-unit){ margin-top:$base-unit;}
+@mixin margin-right($base-unit){ margin-right:$base-unit;}
+@mixin margin-bottom($base-unit){ margin-bottom:$base-unit;}
+@mixin margin-left($base-unit){ margin-bottom:$base-unit;}
+
+/*outline*/
+/*included for brownie points--though i never use it*/
+@mixin outline($outline-color,$outline-style,$outline-width){ outline:$outline-color $outline-style $outline-width;}
+
+/*border*/
+@mixin border-all($border-size,$border-color,$border-style){ border:$border-size $border-style $border-color;}
+@mixin border-top($border-size,$border-color,$border-style){ border-top:$border-size $border-style $border-color;}
+@mixin border-right($border-size,$border-color,$border-style){ border-right:$border-size $border-style $border-color;}
+@mixin border-bottom($border-size,$border-color,$border-style){ border-bottom:$border-size $border-style $border-color;}
+@mixin border-left($border-size,$border-color,$border-style){ border-bottom:$border-size $border-style $border-color;}
+
+/*padding*/
+@mixin padding-all($base-unit){	padding:$base-unit;}
+@mixin padding-top($base-unit){	padding-top:$base-unit;}
+@mixin padding-right($base-unit){ padding-right:$base-unit;}
+@mixin padding-bottom($base-unit){ padding-bottom:$base-unit;}
+@mixin padding-left($base-unit){ padding-bottom:$base-unit;}
