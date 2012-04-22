@@ -1,90 +1,132 @@
-/*
-Syntax error: Invalid CSS after "  opacity: 0": expected ";", was ".$level; "
-        on line 48 of ./src/ux/_css3.scss
-        from line 2 of ./src/ux/ux.scss
+@charset "IBM437";
+/*-UX-*/
+/*CSS3*/
+/*--TEXT ATTRIBUTES--*/
+/*--DIV ATTRIBUTES--*/
+/*Round Div*/
+/*Div Shadow*/
+/*Div Rotate*/
+/*Div Gradient*/
+/*Element Opacity*/
+.box_rgba {
+  background-color: transparent;
+  background-color: rgba(180, 180, 144, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99B4B490,endColorstr=#99B4B490);
+  zoom: 1; }
 
-43:   background-image:         linear-gradient(to bottom, $start, $finish);
-44: }
-45: 
-46: /*Element Opacity*/
-47: @mixin opacity ($level) { /* use between 01-99 */
-48:   opacity: 0.$level; 
-49:   filter: alpha(opacity=$level); 
-50: }
-51: 
-52: 
-53: .box_rgba {
+.box_rotate {
+  -webkit-transform: rotate(7.5deg);
+  -moz-transform: rotate(7.5deg);
+  -ms-transform: rotate(7.5deg);
+  -o-transform: rotate(7.5deg);
+  transform: rotate(7.5deg);
+  filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9                       M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104, sizingMethod='auto expand');
+  zoom: 1; }
 
-Backtrace:
-./src/ux/_css3.scss:48
-./src/ux/ux.scss:2
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:928:in `expected'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:874:in `expected'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:869:in `tok!'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:430:in `block in declaration_or_ruleset'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:912:in `call'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:912:in `rethrow'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:436:in `declaration_or_ruleset'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:398:in `block_child'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:387:in `block_contents'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:379:in `block'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:152:in `mixin_directive'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:145:in `special_directive'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:124:in `directive'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:397:in `block_child'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:390:in `block_contents'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:58:in `stylesheet'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/scss/parser.rb:27:in `parse'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/engine.rb:326:in `_to_tree'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/engine.rb:258:in `to_tree'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:144:in `visit_import'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:37:in `visit'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:18:in `visit'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:53:in `map'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/base.rb:37:in `visit'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:18:in `visit'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/visitors/perform.rb:7:in `visit'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/engine.rb:299:in `_render'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/engine.rb:246:in `render'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/plugin/compiler.rb:200:in `each'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/plugin/compiler.rb:272:in `block (4 levels) in watch'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:73:in `call'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:35:in `update'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/state/directory.rb:39:in `block in modified'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/state/directory.rb:37:in `each'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/state/directory.rb:37:in `modified'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/state/directory.rb:18:in `refresh'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:17:in `block in run'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/vendor/fssm/lib/fssm.rb:70:in `monitor'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/plugin/compiler.rb:265:in `watch'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/plugin.rb:107:in `method_missing'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/exec.rb:431:in `watch_or_update'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/exec.rb:302:in `process_result'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/exec.rb:41:in `parse'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/lib/sass/exec.rb:21:in `parse!'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.1.15/bin/sass:8:in `<top (required)>'
-C:/Ruby193/bin/sass:19:in `load'
-C:/Ruby193/bin/sass:19:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"  opacity: 0\": expected \";\", was \".$level; \"\A         on line 48 of ./src/ux/_css3.scss\A         from line 2 of ./src/ux/ux.scss\A \A 43:   background-image:         linear-gradient(to bottom, $start, $finish);\A 44: }\A 45: \A 46: /*Element Opacity*/\A 47: @mixin opacity ($level) { /* use between 01-99 */\A 48:   opacity: 0.$level; \A 49:   filter: alpha(opacity=$level); \A 50: }\A 51: \A 52: \A 53: .box_rgba {"; }
+.box_scale {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9                       M11=0.9999025240093042, M12=-0.013962180339145272, M21=0.013962180339145272, M22=0.9999025240093042,SizingMethod='auto expand'); }
+
+.box_3dtransforms {
+  -webkit-perspective: 300;
+  -moz-perspective: 300;
+  -ms-perspective: 300;
+  perspective: 300;
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform: rotateY(180deg);
+  -moz-transform-style: preserve-3d;
+  -ms-transform: rotateY(180deg);
+  -ms-transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d; }
+
+.box_transition {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.box_bgsize {
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%; }
+
+.box_columns {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 15px;
+  -moz-column-count: 2;
+  -moz-column-gap: 15px;
+  column-count: 2;
+  column-gap: 15px; }
+
+.box_animation:hover {
+  -webkit-animation: myanim 5s infinite;
+  -moz-animation: myanim 5s infinite;
+  -ms-animation: myanim 5s infinite;
+  -o-animation: myanim 5s infinite; }
+
+@-webkit-keyframes myanim {
+  0% {
+    opacity: 0.0; }
+
+  50% {
+    opacity: 0.5; }
+
+  100% {
+    opacity: 1.0; } }
+
+@-moz-keyframes myanim {
+  0% {
+    opacity: 0.0; }
+
+  50% {
+    opacity: 0.5; }
+
+  100% {
+    opacity: 1.0; } }
+
+@-ms-keyframes myanim {
+  0% {
+    opacity: 0.0; }
+
+  50% {
+    opacity: 0.5; }
+
+  100% {
+    opacity: 1.0; } }
+
+@-o-keyframes myanim {
+  0% {
+    opacity: 0.0; }
+
+  50% {
+    opacity: 0.5; }
+
+  100% {
+    opacity: 1.0; } }
+
+.matrix {
+  -webkit-transform: matrix(1.895, -2.518, -1.293, -0.658, 3, -4);
+  -moz-transform: matrix(1.895, -2.518, -1.293, -0.658, 3px, -4px);
+  -ms-transform: matrix(1.895, -2.518, -1.293, -0.658, 3, -4);
+  -o-transform: matrix(1.895, -2.518, -1.293, -0.658, 3, -4);
+  transform: matrix(1.895, -2.518, -1.293, -0.658, 3, -4); }
+
+.box_tabsize {
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2; }
+
+/*@import "svg";
+@import "webkit";*/
