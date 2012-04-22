@@ -1,10 +1,10 @@
 /*--FONTS--*/
 // drop all font files in root of the font folder
 
-$header = "";
-$subheader ="";
-$contentheader="" ;
-$content="";
+$header:avante-guard;       // ex: avante-guard 
+$subheader:georgia-sans;     // ex: georgia-sans
+$contentheader:avante-guard; // ex: avante-guard 
+$content:helvetica;       // ex: helvetica
 
 
 /*--Header--*/
@@ -25,9 +25,6 @@ h1,h2 .font-header {
     font-style: normal;
 }
 
-
-
-
 /*--Subheader--*/
 h2,h3, .font-subheader {
 	font-family:$subheader;
@@ -46,8 +43,6 @@ h2,h3, .font-subheader {
 }
 
 
-
-
 /*--Content-Header--*/
 h2,h3, .font-contentheader {
 	font-family:$contentheader;
@@ -64,8 +59,6 @@ h2,h3, .font-contentheader {
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 
 /*--Content--*/
